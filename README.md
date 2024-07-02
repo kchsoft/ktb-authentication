@@ -12,3 +12,33 @@ Kakao Api and OAuth 2.0
 ## 요구 사항
 Kakao에 로그인을 할 수 있어야 하며, 로그 아웃 또한 가능해야 한다.  
 Kakao에 대한 인증을 마쳤다면, Kakao API를 바탕으로 Kakao 서비스를 이용한다.  
+
+---
+
+## OAuth 2.0 과정
+필수 정보 :  
+ - Client ID : 인증하는 서비스(카카오,구글,페이스북 등)는 요청(나의 app)하는 app을 구분한다.
+ - Client Secret : ID에 대한 비밀번호, __보안 중요__
+ - Authorized redirect URIs : 내가 설정한다. 인증을 마친 서비스(카카오,구글 등)는 해당 URI로 redirect한다.  
+
+위의 정보들은 서비스(카카오,구글, 등)에 내 app을 등록하고, 발급 받는다.  
+
+### OAuth 2.0 Onwer 승인 과정  
+> 3-1 요청 URL 예시 : https://resource.server/?client_id=abc&scope=B,C&redirect_uri=https://exam/callback
+ - scope : 인증하는 서비스(카카오)에서 제공 하는 기능이다. ex) B = 카카오톡 친구 목록 , C = 카카오톡 대화 내용  
+<img src="./OAuth2.0 Owner승인.svg" alt="OAuth2.0 Owner승인" width="700" height="700"/>  
+
+
+
+
+
+### OAuth 2.0 Server 승인 과정
+>2. Location : https://client/callback?code=3  
+
+>4. URL : https://resource.server/token?grant_type=authorization_code&code=3&redirect_uri=https://exam/callback&client_id=abc&client_secret=123  
+
+<img src= "./OAuth2.0 Server승인.svg" alt = "OAuth2.0 Server승인" width="700" height="700"/>  
+
+
+### OAuth 2.0 Access Token 발급 과정
+<img src= "./OAuth2.0 AccessToken.svg" alt = "OAuth2.0 Server승인" width="700" height="700"/>
