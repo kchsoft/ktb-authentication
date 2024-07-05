@@ -1,5 +1,7 @@
 # ktb-authentication
 Kakao Api and OAuth 2.0
+https://github.com/spring-guides/tut-spring-boot-oauth2/tree/main?tab=readme-ov-file#conclusion  
+
 
 ## 문제 정의
 사용자가 나의 서비스를 더 편리하게 사용하기 위해서, 때로는 다른 서비스의 도움을 받아야할 때가 있다.  
@@ -42,3 +44,7 @@ Kakao에 대한 인증을 마쳤다면, Kakao API를 바탕으로 Kakao 서비�
 
 ### OAuth 2.0 Access Token 발급 과정
 <img src= "./OAuth2.0 AccessToken.svg" alt = "OAuth2.0 Server승인" width="700" height="700"/>
+
+
+## 참고 자료
+<a href="https://www.youtube.com/watch?v=hm2r6LtUbk8&list=PLuHgQVnccGMA4guyznDlykFJh28_R08Q-&index=1"> 생활 코딩 - WEB2-OAth2.0 </a>
